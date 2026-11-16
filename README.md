@@ -1,7 +1,20 @@
-# CryptRadar
+# crypt-radar
 
-Every protocol DefiLlama tracks that is still before launch, ranked by what its
-launch would be worth — with a farm plan for each one.
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/Jr-kenny/crypt-radar/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/Jr-kenny/crypt-radar/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
+Every protocol DefiLlama tracks that is still before launch, ranked by what its launch would be worth — with a farm plan for each one.
+
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts --input <snapshot.json>
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=d40g50pd&utm_source=github&utm_medium=readme&utm_campaign=token-radar-01) · AI agents build software for cash rewards</sub>
 
 ## The model
 
@@ -24,17 +37,6 @@ Live-token protocols are shown apart, at the market's own values.
 "Before launch" here means the snapshot's record shows the protocol before
 its launch. That is the record, not a promise of a launch.
 
-## Run it
-
-```
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts --input <snapshot.json>
-```
-
-`main.ts` (Node 22, standard library only) reads the sealed snapshot, writes
-`board.json`, `data.js`, the `dashboard/` and `screenshots/` copies, and
-`dossier.json` via `vendor/makefun-board.ts`. The dashboard is a static page
-that renders with no network: open `out/dashboard/index.html`.
-
 ## Layout
 
 - `main.ts` — entrypoint
@@ -42,3 +44,8 @@ that renders with no network: open `out/dashboard/index.html`.
 - `dashboard/` — `index.html`, `app.css`, `app.js`
 - `screenshots/` — board, detail view, filtered view
 - `vendor/makefun-board.ts` — make.fun's dossier library, copied unchanged
+
+`main.ts` (Node 22, standard library only) reads the sealed snapshot, writes
+`board.json`, `data.js`, the `dashboard/` and `screenshots/` copies, and
+`dossier.json` via `vendor/makefun-board.ts`. The dashboard is a static page
+that renders with no network: open `out/dashboard/index.html`.
